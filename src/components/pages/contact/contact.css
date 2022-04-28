@@ -1,0 +1,144 @@
+.banner-contact {
+  height: 170px;
+  margin-bottom: 1rem;
+  background-image: url("contact_banner.png");
+}
+
+.contact_space {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(23, 36, 44, 0.63);
+  backdrop-filter: blur(54px);
+}
+.contact-text {
+  color: white;
+  text-align: center;
+  margin-top: 0.9cm;
+  font-weight: 645;
+  font-size: 2.5rem;
+  letter-spacing: 0px;
+}
+.main-div {
+  /* height: 30cm; */
+}
+.sub-div {
+  width: 80%;
+  /* height: 45%; */
+  display: flex;
+  flex-direction: row;
+  margin-top: 2cm;
+  margin-left: 9cm;
+  border-radius: 10px;
+  object-fit: contain;
+}
+.left-div {
+  width: 50%;
+}
+
+.right-div {
+  width: 50%;
+  margin-right: 6cm;
+}
+
+label.contact-value {
+  font-size: 18px;
+}
+
+/* .label.contact-value {
+    font-size: 18px !important;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    
+  } */
+.contact-detail {
+  border-radius: 1cm;
+  width: 100%;
+  padding-bottom: 50px;
+  height: 28%;
+}
+.contact-container {
+  display: flex;
+  flex-direction: row;
+}
+.contact-info {
+  margin-left: 10px;
+  padding: 0px 15px;
+  color: #333333;
+  font: 14px karla;
+  align-content: center;
+}
+.contact-title {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: inherit;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.contact-description {
+  margin-top: -10px;
+  margin: 0;
+}
+.contact-desc {
+  margin-bottom: 10px;
+  font-family: "Karla", sans-serif;
+  line-height: 1.6;
+}
+
+.contact-email-phno {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+}
+@media screen and (max-width: 1133px) {
+  .sub-div {
+    margin-left: 40px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  .left-div {
+    width: 100%;
+  }
+  .contact-detail {
+    border-radius: 1cm;
+    width: 100%;
+    padding-bottom: 80px;
+    height: 28%;
+  }
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .contact-info {
+    margin-left: 15%;
+    padding: 0px 15px;
+    color: #333333;
+    font: 14px karla;
+    align-content: center;
+  }
+  .right-div {
+    width: 100%;
+  }
+
+  .contact-email-phno {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .contact-input {
+    width: 100%;
+  }
+  .contact-send-btn {
+    float: right;
+    margin-top: 20px;
+  }
+  .contact-captcha {
+    margin-left: 25px;
+  }
+}

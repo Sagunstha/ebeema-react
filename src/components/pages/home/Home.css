@@ -1,0 +1,478 @@
+.banner-section {
+  padding: 100px 0;
+  display: block;
+  font-family: Roboto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.home-container {
+  margin: 0% 10% 0% 12%;
+}
+.banner-wrapper {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.left-banner-wrapper {
+  width: 34%;
+}
+
+.left-banner-text h1 {
+  font-weight: 500 !important;
+  margin: 0;
+  font-size: 47px;
+  line-height: 1.3;
+  letter-spacing: 0.1px;
+}
+.right-banner-wrapper {
+  width: 55%;
+}
+.home-banner-wrapper {
+  display: block;
+}
+/* .banner-image {
+  height: 50%;
+  width: 50%;
+}  */
+.banner-image {
+  float: right;
+}
+
+.banner-desc {
+  font-size: 30px;
+}
+
+.ant-carousel-vertical .slick-dots li {
+  width: 3px;
+  height: 16px;
+  margin: 4px 2px;
+  vertical-align: baseline;
+  background: black;
+}
+.ant-carousel-vertical .slick-dots li.slick-active {
+  width: 3px;
+  height: 24px;
+}
+
+.video-wrapper {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.video-play-button {
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.video-play-button a {
+  background: #fff;
+  border: 1px solid rgba(61, 83, 140, 0.25);
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgb(23 73 138 / 8%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.video-text h5 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 2px;
+  color: #3d538c;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+.select-insurance-type {
+  display: block;
+  margin-top: 10px;
+}
+.select-insurance-type form {
+  display: flex;
+  flex-direction: row;
+}
+.insurance-lists {
+  border: 1px solid rgba(142, 25, 46, 0.4);
+  line-height: 38px;
+  padding-left: 5px;
+  height: 60px;
+  width: 65%;
+  font-size: 19px;
+  color: #000;
+  opacity: 0.5;
+  font-family: Roboto;
+}
+.insurance-type-submit {
+  color: #fff;
+  height: 60px;
+  background: #56db97;
+  font-size: 22px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0px 50px;
+}
+.insurance-type-submit p {
+  margin-bottom: 0px;
+}
+.insurance-product-wrapper {
+  margin-top: 80px;
+}
+.list-of-insurance-policy {
+  /* display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-gap: 20px; */
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 17px;
+}
+.plan-container {
+  width: calc(100% / 7 - 15px);
+  text-align: center;
+  height: 8rem;
+  padding: 10px 0;
+  background: #f9fbfe;
+  border-radius: 8px;
+}
+.plan-img {
+  display: flex;
+  justify-content: center;
+  transition: 1.1s;
+}
+.plan-container:hover.plan-img {
+  transform: scale(1.3);
+}
+.plan-desc {
+  display: block;
+  margin-top: 20px;
+  /* line-height: 50px; */
+  position: relative;
+  font-size: 15px;
+  font-weight: 530;
+  font-family: Roboto;
+  color: #000;
+  text-decoration: none;
+}
+.banner-insurance-product-wrapper2 {
+  margin-top: 35px;
+  height: 100px;
+}
+
+.corporate-plan-section {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.92),
+      rgba(255, 255, 255, 0.92)
+    ),
+    #4f5aa0;
+  padding: 40px 0;
+  overflow: hidden;
+}
+.corporate-plan-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.corporate-plan-content h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #3d538c;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.get-assistance button {
+  background: #56db97;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 18px;
+  border: 0;
+  padding: 10px 30px;
+}
+.why-diff-title {
+  text-align: center;
+  font-family: Roboto;
+}
+.arrow-img {
+  height: 40px;
+  width: 40x;
+}
+.why-different {
+  padding: 60px 0;
+}
+
+.why-diff-description {
+  display: flex;
+  flex-direction: row;
+  padding: 40px 70px 0;
+}
+.diff-top {
+  margin-bottom: 20px;
+}
+.why-diff-left {
+  width: 40%;
+  padding: 45px 30px;
+  background: #f5f7fa;
+  border-radius: 8px;
+  height: fit-content;
+}
+.why-diff-left h2 {
+  font-weight: 700;
+  line-height: 48px;
+  font-size: 36px;
+  color: #3a6da7;
+  display: block;
+  margin-top: 0;
+}
+.why-diff-left p {
+  color: hsl(99deg 29% 39%);
+}
+
+.why-diff-right {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 0px;
+  padding: 0 20px;
+}
+.why-diff-right-img {
+  background: #ebebfb;
+  padding: 7px;
+  border-radius: 4px;
+  width: 14%;
+}
+.why-diff-right-each {
+  padding: 20px;
+  border-radius: 10px;
+}
+.why-diff-right-each h1 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #1f1f1f;
+}
+.why-diff-right-each p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #424242;
+}
+.why-diff-right-each:hover {
+  background-color: #ebebfb;
+}
+.how-work-title {
+  text-align: center;
+}
+
+.how-first-prag {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.how-it-works h2 {
+  font-weight: 300;
+  font-family: Roboto;
+  font-size: 48px;
+  line-height: 72px;
+}
+.working-bar {
+  display: flex;
+  flex-direction: row;
+}
+.working-bar-text {
+  text-align: center;
+}
+.compare-color {
+  background-color: #3d538c;
+}
+.testimonials-section {
+  padding-top: 30px;
+  position: relative;
+}
+.training-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.training-title h1 {
+  font-weight: 200;
+  font-family: Roboto;
+  font-size: 52px;
+  line-height: 1.42857143;
+  color: #333;
+}
+
+/* .slick-initialized-container {
+  margin-top: 30px;
+  width: 100%;
+}
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: 33.3333% 33.3333% 33.3333%;
+  margin-left: 120px;
+  row-gap: 100px;
+  column-gap: 100px;
+} */
+.carousel {
+  margin: 0 10%;
+}
+.testimonial-cards1 {
+  height: 30rem;
+  text-align: center;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+  object-fit: contain;
+}
+.testimoial-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-desc {
+  width: 70%;
+  margin-left: 70px;
+  margin-top: 20px;
+}
+.testimonial-name {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #424242;
+}
+.testimonial-type {
+  font-size: 16px;
+  line-height: 24px;
+  color: #668eba;
+}
+.anticon.anticon-star.anticon svg {
+  color: #f79633;
+  font-size: 18px;
+  display: inline-block;
+}
+.ant-carousel .slick-prev,
+.ant-carousel .slick-prev:hover {
+  left: 10px;
+  z-index: 2;
+  color: white;
+  font-size: 20px;
+  height: 30px;
+}
+
+.ant-carousel .slick-next,
+.ant-carousel .slick-next:hover {
+  right: 10px;
+  z-index: 2;
+  color: white;
+  font-size: 20px;
+  height: 30px;
+}
+@media screen and (max-width: 1133px) {
+  .banner-section {
+    padding: 80px 0;
+    display: block;
+  }
+  .home-container {
+    margin: 0% 5% 0% 5%;
+  }
+  .left-banner-wrapper {
+    width: 100%;
+    padding-left: 0px;
+  }
+  .right-banner-wrapper {
+    display: none;
+  }
+  .insurance-type-submit {
+    padding: 0px 120px;
+  }
+  .insurance-product-wrapper {
+    margin-top: 40px;
+  }
+  .list-of-insurance-policy {
+    display: flex;
+    flex-wrap: 20px;
+    row-gap: 20px;
+    column-gap: 18px;
+  }
+  .plan-container {
+    width: 18%;
+  }
+  .caousel {
+    margin: 0px 1%;
+  }
+  .pageImage {
+    height: 50%;
+    width: 50%;
+  }
+  .testimonial-desc {
+    width: 90%;
+
+    margin-left: 5px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .banner-section {
+    padding: 80px 0;
+    display: block;
+  }
+  .banner-wrapper {
+    display: flex;
+    flex-flow: row;
+    padding-left: 0px;
+  }
+  .left-banner-wrapper {
+    width: 100%;
+    padding-left: 0px;
+  }
+  .insurance-type-submit {
+    padding: 0px 30px;
+  }
+  .right-banner-wrapper {
+    display: none;
+  }
+  .corporate-plan-section {
+    padding: 25px 0;
+  }
+  .training-title h1 {
+    font-size: 30px;
+  }
+  .slider-arrows {
+    display: none;
+  }
+  .insurance-product-compare {
+    width: 100%;
+  }
+  .right-banner-wrapper {
+    display: none;
+  }
+  .insurance-lists {
+    width: 100%;
+  }
+
+  .plan-container {
+    width: 30%;
+  }
+
+  .testimonial-cards1 {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+}
