@@ -30,15 +30,19 @@ const Index = () => {
         <Link to="#">{category}</Link>
       </div>
       <div className="filter-split">
-        <Filter
-          term={term}
-          sum={sum}
-          age={age}
-          setAge={setAge}
-          setTerm={setTerm}
-          setSum={setSum}
-        />
-        <Table sum={sum} term={term} />
+        <div className="filter-section">
+          <Filter
+            term={term}
+            sum={sum}
+            age={age}
+            setAge={setAge}
+            setTerm={setTerm}
+            setSum={setSum}
+          />
+        </div>
+        <div className="table-section">
+          <Table sum={sum} term={term} category={category} />
+        </div>
       </div>
     </>
   );

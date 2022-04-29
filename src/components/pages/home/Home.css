@@ -42,10 +42,39 @@ h6 {
   height: 50%;
   width: 50%;
 }  */
-.banner-image {
-  float: right;
+.corporate-form-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.corporate-form-wrapper .ant-row.ant-form-item {
+  width: calc(100% / 2 - 10px);
 }
 
+.corporate-form-wrapper .ant-row.ant-form-item.full-block {
+  width: 100%;
+}
+
+.home-banner-wrapper {
+  display: flex !important;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 500px;
+  position: relative;
+}
+.banner-title {
+  width: 50%;
+  position: absolute;
+  top: 20px;
+  font-size: 20px;
+}
+.banner-image {
+  width: 80% !important;
+  margin-left: auto;
+}
+.banner-image img {
+  width: 100%;
+}
 .banner-desc {
   font-size: 30px;
 }
@@ -116,20 +145,17 @@ h6 {
   font-family: Roboto;
 }
 .insurance-type-submit {
-  color: #fff;
+  color: #fff !important;
   height: 60px;
   background: #56db97;
   font-size: 22px;
   text-decoration: none;
   display: flex;
   align-items: center;
-  padding: 0px 50px;
+  padding: 0px 40px;
 }
 .insurance-type-submit p {
   margin-bottom: 0px;
-}
-.insurance-product-wrapper {
-  margin-top: 80px;
 }
 .list-of-insurance-policy {
   /* display: grid;
@@ -384,6 +410,26 @@ h6 {
   color: white;
   font-size: 20px;
   height: 30px;
+}
+@media screen and (max-width: 1226px) {
+  .home-container {
+    margin: 0% 2% 0% 4%;
+  }
+  .left-banner-text h1 {
+    font-size: 30px;
+  }
+  .banner-title {
+    font-size: 15px;
+  }
+  .banner-desc {
+    font-size: 25px;
+  }
+  .insurance-type-submit {
+    padding: 0px 10px;
+  }
+  .banner-section {
+    padding: 70px 0;
+  }
 }
 @media screen and (max-width: 1133px) {
   .banner-section {

@@ -42,71 +42,74 @@ function Navbar() {
     <>
       {location.pathname !== "/login" && location.pathname !== "/register" && (
         <nav className={`navbar ${show && "nav__blue"}`}>
-          <Link to="/">
-            <img className="header-logo" src="./image/logo.png" alt="" />
-          </Link>
-          <div className="three-bar" onClick={handelClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"} />
-          </div>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li
-              className="nav-item"
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
-            >
-              <Link to="#" className="nav-links" onClick={closeMobileMenu}>
-                Insurance Plans <IoIosArrowDown className="ioios" size="1rem" />
+          <div className="container">
+            <div className="nav-wrapper">
+              <Link to="/">
+                <img className="header-logo" src="./image/logo.png" alt="" />
               </Link>
+              <div className="three-bar" onClick={handelClick}>
+                <i className={click ? "fas fa-times" : "fas fa-bars"} />
+              </div>
+              <ul className={click ? "nav-menu active" : "nav-menu"}>
+                <li
+                  className="nav-item"
+                  onMouseEnter={onMouseEnter}
+                  onMouseLeave={onMouseLeave}
+                >
+                  <Link to="#" className="nav-links" onClick={closeMobileMenu}>
+                    Insurance Plans{" "}
+                    <IoIosArrowDown className="ioios" size="1rem" />
+                  </Link>
 
-              {dropdown && <Dropdown />}
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/aboutUs"
-                className="nav-links acb"
-                onClick={closeMobileMenu}
-              >
-                About Us
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/contact"
-                className="nav-links acb"
-                onClick={closeMobileMenu}
-              >
-                Contact
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/blog"
-                className="nav-links acb"
-                onClick={closeMobileMenu}
-              >
-                Blog
-              </Link>
-              <div class="vericle-line"></div>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/login"
-                className="nav-links-mobile auth-log"
-                onClick={closeMobileMenu}
-              >
-                Login
-              </Link>
-              <Link
-                to="/register"
-                className="nav-links-mobile auth-reg"
-                onClick={closeMobileMenu}
-              >
-                Register
-              </Link>
-            </li>
-          </ul>
+                  {dropdown && <Dropdown />}
+                </li>
+                <li className="nav-item">
+                  <Link
+                    to="/aboutUs"
+                    className="nav-links acb"
+                    onClick={closeMobileMenu}
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    to="/contact"
+                    className="nav-links acb"
+                    onClick={closeMobileMenu}
+                  >
+                    Contact
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    to="/blog"
+                    className="nav-links acb"
+                    onClick={closeMobileMenu}
+                  >
+                    Blog
+                  </Link>
+                  <div class="vericle-line"></div>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    to="/login"
+                    className="nav-links-mobile auth-log"
+                    onClick={closeMobileMenu}
+                  >
+                    Login
+                  </Link>
+                  <Link
+                    to="/register"
+                    className="nav-links-mobile auth-reg"
+                    onClick={closeMobileMenu}
+                  >
+                    Register
+                  </Link>
+                </li>
+              </ul>
 
-          {/* <div className="app_header">
+              {/* <div className="app_header">
     <ul className="navbar-menus">
       <li className="normal-width list_float">
         <a href="/contact" className="menu-icon">
@@ -127,6 +130,8 @@ function Navbar() {
       </li>
     </ul>
   </div> */}
+            </div>
+          </div>
         </nav>
       )}
     </>
