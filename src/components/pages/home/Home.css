@@ -411,7 +411,7 @@ h6 {
   font-size: 20px;
   height: 30px;
 }
-@media screen and (max-width: 1226px) {
+@media screen and (max-width: 1400px) {
   .home-container {
     margin: 0% 2% 0% 4%;
   }
