@@ -424,11 +424,26 @@ h6 {
   .banner-desc {
     font-size: 25px;
   }
-  .insurance-type-submit {
-    padding: 0px 10px;
-  }
   .banner-section {
     padding: 70px 0;
+  }
+  .video-play-button a {
+    width: 30px;
+    height: 30px;
+  }
+  .video-text h5 {
+    font-size: 15px;
+  }
+  .insurance-lists {
+    height: 50px;
+    width: 55%;
+  }
+  .insurance-type-submit {
+    height: 50px;
+    padding: 0px 20px;
+  }
+  .insurance-type-submit p {
+    margin-bottom: 0px;
   }
 }
 @media screen and (max-width: 1133px) {

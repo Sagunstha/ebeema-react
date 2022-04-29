@@ -40,23 +40,27 @@ const Blog = () => {
 
   return (
     <div className="blog-container">
-      <div className="b-search">
-        <Input
-          onChange={(e) => setSearchKey(e.target.value)}
-          style={{
-            height: 55,
-          }}
-          size="large"
-          placeholder="want to search?Type here"
-          prefix={
-            <SearchOutlined style={{ fontSize: "1.2rem", marginTop: "5px" }} />
-          }
-          suffix={
-            <Button className="blog-search-button" onClick={searchblog}>
-              <span style={{ fontSize: "15px" }}>Search </span>
-            </Button>
-          }
-        />
+      <div>
+        <div className="b-search">
+          <Input
+            onChange={(e) => setSearchKey(e.target.value)}
+            style={{
+              height: 55,
+            }}
+            size="large"
+            placeholder="want to search?Type here"
+            prefix={
+              <SearchOutlined
+                style={{ fontSize: "1.2rem", marginTop: "5px" }}
+              />
+            }
+            suffix={
+              <Button className="blog-search-button" onClick={searchblog}>
+                <span style={{ fontSize: "15px" }}>Search </span>
+              </Button>
+            }
+          />
+        </div>
         {searchkey && blogcontent?.length === 0 ? (
           <h1 className="error-message">No Any Blogs Found</h1>
         ) : (
