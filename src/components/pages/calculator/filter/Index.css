@@ -143,6 +143,92 @@ span.ant-checkbox-inner {
   margin: 0;
   line-height: 33px;
 }
+.compare-plans {
+  margin-top: 5px;
+}
+.table {
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: 2px solid #f0f0f0;
+}
+.content-compare {
+  border: 2px solid #f0f0f0;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+}
+.table > tbody > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid rgb(28, 47, 34);
+}
+.line-rht-cmp {
+  background: #fff;
+  box-shadow: inset -0.5px 0 1px #616161;
+}
+.compare-parts {
+  overflow: hidden;
+  text-align: center;
+}
+td,
+th {
+  padding: 0;
+}
+.box-term-pay {
+  display: flex;
+  float: right;
+  font-size: 12px;
+  color: #3a6da7;
+}
+.benefits-button {
+  text-align: center;
+  padding: 7% 0;
+}
+.view-plan-button {
+  background: #3d538c;
+  color: #fff;
+  padding: 6px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.select-plan-button {
+  background: #ec3e26;
+  color: #ffff;
+  padding: 11px 28px;
+  border: 0;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.select-plan-button:hover {
+  background: #126afb;
+}
+
+.modal-viewplan {
+  text-align: center;
+}
+.modal-logo {
+  height: 80px;
+  width: 250px;
+  object-fit: contain;
+}
+.company-invoice-wrapper {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+.invoice-company-name {
+  padding: 0px 15px;
+}
+.invoice-companyy-title {
+  background: #fafafa;
+  font-size: 15px;
+  padding: 20px;
+}
+
 @media screen and (max-width: 1133px) {
   .filter-split {
     padding: 0;

@@ -579,9 +579,10 @@ const Calculator = () => {
         </Form.Item>
         <div>{err}</div>
         <Modal
+          className="user-modal"
           visible={visible}
           title="Your Information"
-          style={{ top: 10 }}
+          style={{ top: 20 }}
           onCancel={handleCancel}
           footer={null}
         >

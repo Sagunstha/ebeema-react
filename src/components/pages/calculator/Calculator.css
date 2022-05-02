@@ -1,5 +1,9 @@
 .compare__calclulator {
   width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 form#dynamic_rule {
   /* transition: transform 250ms; */
@@ -14,6 +18,28 @@ form#dynamic_rule {
 
 .ant-select-selector {
   padding: 0x 11px;
+}
+.ant-modal.user-modal .ant-modal-content {
+  border-radius: 15px !important;
+  width: 100%;
+}
+.ant-modal.user-modal .ant-modal-content .ant-modal-header {
+  background-color: #fafafa;
+  border-radius: 15px 15px 0 0;
+}
+.ant-modal.user-modal .ant-modal-content .ant-modal-header .ant-modal-title {
+  font-size: 18px !important ;
+  padding: 0 2%;
+  color: #3d538c !important;
+}
+.ant-modal.user-modal .ant-modal-body {
+  padding: 20px !important;
+}
+button.ant-btn.ant-btn-primary.ant-btn-lg.user-modal-button {
+  float: right;
+}
+form#userInfo .ant-row.ant-form-item {
+  margin-bottom: 15px !important;
 }
 
 label.ant-radio-button-wrapper {
@@ -121,6 +147,14 @@ label {
 }
 .ant-modal-content {
   width: 125%;
+}
+@media screen and (max-width: 1400px) {
+  form#dynamic_rule {
+    /* transition: transform 250ms; */
+    margin-left: 8%;
+    margin-top: 3%;
+    margin-right: 8%;
+  }
 }
 @media screen and (max-width: 1000px) {
   form#dynamic_rule {

@@ -41,7 +41,7 @@ const Index = () => {
           />
         </div>
         <div className="table-section">
-          <Table sum={sum} term={term} category={category} />
+          <Table sum={sum} term={term} category={category} setAge={setAge} />
         </div>
       </div>
     </>

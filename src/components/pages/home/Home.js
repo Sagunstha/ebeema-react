@@ -11,11 +11,19 @@ import {
   howWorkData,
   testimonialData,
 } from "./HomeData.js";
-
+import { Modal } from "antd";
 function Home() {
+  const [youtubeVisible, setYoutubeVisible] = useState(false);
   const [slideNO, setSlideNo] = useState(3);
 
-  console.log("slideNO", slideNO);
+  // console.log("slideNO", slideNO);
+  const showYoutubeModal = () => {
+    setYoutubeVisible(true);
+  };
+
+  const handleYoutubeCancel = () => {
+    setYoutubeVisible(false);
+  };
 
   useEffect(() => {
     if (window.innerWidth < 800) {
@@ -81,9 +89,31 @@ function Home() {
                   <div className="video-wrapper">
                     <div className="video-play-button" id="stepTwo">
                       <a href="#" className="oveflowHidden">
-                        <img src={playbutton} alt="tutorial playbutton" />
+                        <img
+                          onClick={showYoutubeModal}
+                          src={playbutton}
+                          alt="tutorial playbutton"
+                        />
                       </a>
                     </div>
+                    <Modal
+                      className="youtube-modal"
+                      visible={youtubeVisible}
+                      style={{ top: "25%" }}
+                      footer={null}
+                      maskClosable={true}
+                      onCancel={handleYoutubeCancel}
+                    >
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://youtube.com/embed/foFSEi24BpI"
+                        frameborder="0"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen
+                        title="video"
+                      />
+                    </Modal>
                     <div className="video-text">
                       <h5>Watch tutorials</h5>
                     </div>

@@ -127,6 +127,18 @@ h6 {
 .video-text {
   margin-bottom: 2px;
 }
+/* .ant-modal.youtube-modal .ant-modal-content {
+  background-color: transparent;
+} */
+.ant-modal.youtube-modal .ant-modal-content button.ant-modal-close {
+  display: none;
+}
+.ant-modal.youtube-modal .ant-modal-content .ant-modal-body {
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  width: 520px;
+}
 .select-insurance-type {
   display: block;
   margin-top: 10px;
@@ -428,6 +440,12 @@ h6 {
   }
   .banner-section {
     padding: 70px 0;
+  }
+  .ant-modal.youtube-modal .ant-modal-content .ant-modal-body {
+    margin: 0;
+    padding: 0;
+    height: 300px;
+    width: 520px;
   }
   .video-play-button a {
     width: 30px;

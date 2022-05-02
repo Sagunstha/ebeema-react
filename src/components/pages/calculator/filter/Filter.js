@@ -19,8 +19,13 @@ const Filter = ({ age, term, sum, setAge, setTerm, setSum }) => {
   function onChange(e) {
     console.log(`checked = ${e.target.checked}`);
   }
+  function onTermChange(e) {
+    console.log(`eeeeeee = ${e}`);
+    setTerm(e);
+  }
   function onclick(e) {
     e.preventdefault();
+    console.log("e");
   }
   function onChange(date) {
     const userDOB = moment(date, "YYYY/M/D");
@@ -72,6 +77,7 @@ const Filter = ({ age, term, sum, setAge, setTerm, setSum }) => {
               // bordered: "false",
               outline: "none",
             }}
+            onChange={onTermChange}
             onclick={onclick}
           >
             <Option value="5">5</Option>
@@ -95,11 +101,10 @@ const Filter = ({ age, term, sum, setAge, setTerm, setSum }) => {
         <Form.Item style={{ borderBottom: "1px solid #e0e0e0", padding: 15 }}>
           <h3>Mode of Payment</h3>
           <Select
+            onChange={onChange}
+            onclick={onclick}
             className="dropdown-category"
             placeholder="Select A Mop"
-            // onChange={(value) => {
-            //   handleChangeCategory(value, index);
-            // }}
           >
             <Option>Yearly</Option>
             <Option>Half Yearly</Option>
