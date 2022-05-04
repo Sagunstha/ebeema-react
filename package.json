@@ -19,6 +19,7 @@
     "cjs-loader": "^0.1.0",
     "gh-pages": "^3.2.3",
     "google-maps-react": "^2.0.6",
+    "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "query-string": "^7.1.1",
     "react": "^17.0.2",

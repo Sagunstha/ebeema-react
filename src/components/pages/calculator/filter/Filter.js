@@ -1,5 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchAllResult } from "../../redux/calculatorResult/resultAction";
 import {
   Form,
   Input,
@@ -12,10 +14,59 @@ import {
 import moment from "moment";
 import SelectInput from "@material-ui/core/Select/SelectInput";
 import "./Index.css";
+// import uniqBy from "lodash";
 
 const Filter = ({ age, term, sum, setAge, setTerm, setSum }) => {
   const [form] = Form.useForm();
   const { Option } = Select;
+
+  const results = useSelector((state) => state.allResults.results);
+  const dispatch = useDispatch();
+  const [filtercontent, setFilterContent] = useState();
+
+  const [uniqueCompany, setUniqueCompany] = useState([]);
+  const [uniqueFeature, setUniqueFeature] = useState([]);
+
+  useEffect(() => {
+    filtercontent?.map((item) => {
+      console.log("item", item["company"]);
+
+      Object.entries(item?.company)?.map(([key, value], i) => {
+        console.log("value1", value, i);
+
+        if (i == 2) {
+          if (!uniqueCompany.includes(value)) {
+            uniqueCompany.push(value);
+          }
+          //setUniqueCompany(uniqueCompany, [...uniqueCompany, value]);
+        }
+      });
+    });
+  }, [filtercontent]);
+  console.log("uniqueCompany", uniqueCompany);
+
+  useEffect(() => {
+    filtercontent?.map((item) => {
+      console.log("feature", item["availableFeatures"]);
+
+      item.availableFeatures.map((value, i) => {
+        if (!uniqueFeature.includes(value.name)) {
+          uniqueFeature.push(value.name);
+        }
+      });
+    });
+  }, [filtercontent]);
+  console.log("uniqueFeature", uniqueFeature);
+  useEffect(() => {
+    if (results?.data) {
+      setFilterContent(Object.values(results.data.products));
+    }
+  }, [results]);
+
+  useEffect(() => {
+    dispatch(fetchAllResult());
+  }, []);
+  // console.log("filtercontent", filtercontent);
   function onChange(e) {
     console.log(`checked = ${e.target.checked}`);
   }
@@ -116,64 +167,22 @@ const Filter = ({ age, term, sum, setAge, setTerm, setSum }) => {
         <Form.Item style={{ borderBottom: "1px solid #e0e0e0", padding: 15 }}>
           <p>Company</p>
           <br />
-          <Checkbox className="filter" onChange={onChange}>
-            NLIC Nepal Life Insurance Company
-          </Checkbox>
-          <br />
-          <Checkbox onChange={onChange}>
-            LIC Life Insurance Corporation
-          </Checkbox>
-          <br />
-          <Checkbox onChange={onChange}>
-            National Life Insurance Company Limited
-          </Checkbox>
+          {uniqueCompany?.map((item) => (
+            <Checkbox className="filter" onChange={onChange}>
+              {item}
+            </Checkbox>
+          ))}
         </Form.Item>
 
         <Form.Item style={{ borderBottom: "1px solid #e0e0e0", padding: 15 }}>
           <p>Features</p>
           <br />
-          <Checkbox onChange={onChange}>
-            Accidental Death Benefits (adb)
-          </Checkbox>
-          <br />
-          <Checkbox onChange={onChange} value="a">
-            Term Rider
-          </Checkbox>
-          <br />
-          <Checkbox onChange={onChange} value="b">
-            Premium Waiver Benefit (PWB)
-          </Checkbox>
-          <br />
-          <Checkbox onChange={onChange} value="c">
-            PTD/PWB
-          </Checkbox>
-          <br />
-          <Checkbox onChange={onChange} value="d">
-            ADB/PTD/PWB
-          </Checkbox>
-          <br />
-          <Checkbox onChange={onChange} value="e">
-            PTD
-          </Checkbox>
-          <br />
-          <Checkbox onChange={onChange} value="f">
-            Critical Illness (CI)
-          </Checkbox>
-          <br />
-          <Checkbox onChange={onChange} value="g">
-            asfdsfdsf
-          </Checkbox>
+          {uniqueFeature?.map((item) => (
+            <Checkbox className="filter" onChange={onChange}>
+              {item}
+            </Checkbox>
+          ))}
         </Form.Item>
-
-        {/* <Form.Item
-          name="note"
-          label="Note"
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        ></Form.Item> */}
       </Form>
     </div>
   );

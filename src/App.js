@@ -13,9 +13,10 @@ import PrivacyPolicy from "./components/pages/PrivacyPolicy";
 import Home from "./components/pages/home/Home";
 import Calculator from "./components/pages/calculator/Calculator";
 import "antd/dist/antd.less";
-import Index from "./components/pages/calculator/filter/Index";
+import Result from "./components/pages/calculator/filter/Result";
 import ReadMore from "./components/pages/blog/ReadMore";
 import PasswordReset from "./components/pages/login/PasswordReset";
+import Confirm from "./components/pages/calculator/filter/Confirm";
 
 function App() {
   return (
@@ -35,7 +36,9 @@ function App() {
           <Route path="/term-condition" element={<TermCondition />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/calculator" element={<Calculator />} />
-          <Route path="/result" element={<Index />} />
+          <Route path="/result" element={<Result />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/confirm" element={<Confirm />} />
         </Routes>
         <Footer />
       </Router>

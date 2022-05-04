@@ -21,7 +21,9 @@ form#dynamic_rule {
 }
 .ant-modal.user-modal .ant-modal-content {
   border-radius: 15px !important;
-  width: 100%;
+  width: 150%;
+  top: 150px;
+  right: 120px;
 }
 .ant-modal.user-modal .ant-modal-content .ant-modal-header {
   background-color: #fafafa;
@@ -155,6 +157,9 @@ label {
     margin-top: 3%;
     margin-right: 8%;
   }
+  .ant-modal.user-modal .ant-modal-content {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 1000px) {
   form#dynamic_rule {
@@ -162,6 +167,7 @@ label {
     margin-top: 10px;
     width: 100%;
   }
+
   .ant-space.ant-space-horizontal.ant-space-align-center {
     display: grid;
     grid-template-columns: 26% 26% 26% 26%;

@@ -4,7 +4,7 @@ import Table from "./Table";
 import "./Index.css";
 import { Link, useLocation } from "react-router-dom";
 
-const Index = () => {
+const Result = () => {
   const location = useLocation();
   // console.log("location", location.state.age);
   const [category, setCategory] = useState();
@@ -48,4 +48,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Result;

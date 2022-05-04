@@ -216,7 +216,7 @@ export const Investment = ({
         <Input
           type="number"
           placeholder="Enter your Investment"
-          style={{ width: 250, height: 40 }}
+          style={{ width: 250, height: 45 }}
           value={investment}
           rules={[
             {
