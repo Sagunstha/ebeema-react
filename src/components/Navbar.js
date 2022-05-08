@@ -89,7 +89,7 @@ function Navbar() {
                   >
                     Blog
                   </Link>
-                  <div class="vericle-line"></div>
+                  <div className="vericle-line"></div>
                 </li>
                 <li className="nav-item">
                   <Link

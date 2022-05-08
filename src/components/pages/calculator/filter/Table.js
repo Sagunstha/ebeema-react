@@ -135,7 +135,7 @@ const Table = ({ sum, term, category, setAge }) => {
                         <div>
                           <p className="availablefeatures-name">
                             <span>{word.name}</span>
-                            <a onClick={toggleIcon}>
+                            {/* <a onClick={toggleIcon}>
                               {showfaicon ? (
                                 <i
                                   class="fa fa-times to-right cross-fa"
@@ -147,7 +147,7 @@ const Table = ({ sum, term, category, setAge }) => {
                                   aria-hidden="true"
                                 />
                               )}
-                            </a>
+                            </a> */}
                           </p>
                         </div>
                       ))}

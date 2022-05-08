@@ -51,7 +51,9 @@ const ReadMore = () => {
             <div className="left-blog-detail">
               <span>{contentData.slug}</span>
               <span>{contentData.created_at}</span>
-              <p>{contentData.description}</p>
+              <p
+                dangerouslySetInnerHTML={{ __html: contentData.description }}
+              ></p>
             </div>
           </div>
         )}

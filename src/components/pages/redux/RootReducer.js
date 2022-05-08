@@ -4,7 +4,10 @@ import {
   selectedCategoryReducer,
 } from "./calculator/categoryReducer";
 import { blogReducer, selectedBlogReducer } from "./blog/blogReducer";
-import { resultReducer } from "./calculatorResult/resultReducer.js";
+import {
+  resultReducer,
+  selectedResultReducer,
+} from "./calculatorResult/resultReducer.js";
 const reducers = combineReducers({
   allProducts: categoryReducer,
   product: selectedCategoryReducer,
@@ -13,6 +16,7 @@ const reducers = combineReducers({
   content: selectedBlogReducer,
 
   allResults: resultReducer,
+  result: selectedResultReducer,
 });
 
 export default reducers;

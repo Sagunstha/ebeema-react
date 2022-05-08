@@ -17,3 +17,12 @@ export const resultReducer = (state = initialState, { type, payload }) => {
       return state;
   }
 };
+export const selectedResultReducer = (state = {}, { type, payload }) => {
+  switch (type) {
+    case ActionTypes.SELECTED_RESULT:
+      return { ...state, ...payload };
+
+    default:
+      return state;
+  }
+};

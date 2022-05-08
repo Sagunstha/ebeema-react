@@ -19,7 +19,7 @@ function Footer() {
             <div className="footer-row">
               <div className="footer-logo">
                 {/* image part-> */}
-                <img class="base-img" src="./image/logo.png" alt="" />
+                <img className="base-img" src="./image/logo.png" alt="" />
                 <p>
                   A team of determined, passionate, and crazy entrepreneurs,
                   developers, and financial engineers set out on one common
