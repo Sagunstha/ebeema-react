@@ -45,22 +45,38 @@ button.ant-btn.ant-btn-primary.ant-btn-lg.user-modal-button {
 form#userInfo .ant-row.ant-form-item {
   margin-bottom: 15px !important;
 }
-
-label.ant-radio-button-wrapper {
-  padding: 0 50px;
-  height: 45px;
+.ant-space-item .ant-radio-button-wrapper.term-radio-button {
+  height: 50px;
+  padding: 5px 67px;
   background-color: #f5f5f5;
 }
-
-.ant-radio-button-wrapper .span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.ant-space-item .ant-radio-button-wrapper.term-radio-button span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
 }
-span.ant-radio-button.ant-radio-button-checked {
+.ant-radio-button-wrapper.ant-radio-button-wrapper-checked.term-radio-button
+  .ant-radio-button.ant-radio-button-checked {
   background: #3d538c;
 }
-span.ant-radio-button.ant-radio-button-checked:focus {
+.ant-space-item .ant-radio-button-wrapper.radio_button span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
+}
+.ant-space-item .ant-radio-button-wrapper.radio_button {
+  height: 50px;
+  padding: 5px 60px;
+  background-color: #f5f5f5;
+}
+.ant-radio-button-wrapper.ant-radio-button-wrapper-checked.radio_button
+  .ant-radio-button.ant-radio-button-checked {
+  background: #3d538c;
+}
+.ant-radio-button-wrapper.ant-radio-button-wrapper-checked.radio_button
+  .ant-radio-button.ant-radio-button-checked:focus {
   outline: none !important;
   box-shadow: none;
 }
@@ -80,33 +96,10 @@ span.ant-radio-button.ant-radio-button-checked:focus {
   background-color: #def2fa;
 }
 
-span {
-  font-size: 13px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
 .section_title {
   display: flex;
 }
-button.ant-btn.ant-btn-primary {
-  width: 100%;
-  height: 45px;
-  background: #3d538c;
-  border-color: none;
-  border-width: 0;
-}
 
-h5.ant-typography {
-  font-size: 10px !important;
-  font-weight: 100px;
-  margin-top: 17px;
-}
-.input_sum {
-  width: 200px;
-  margin-left: 52px;
-  height: 40px;
-}
 .age_section {
   display: flex;
   flex-direction: row;
@@ -114,7 +107,17 @@ h5.ant-typography {
 .prosperage_section {
   margin-left: 400px;
 }
-.ant-form label {
+
+.category_section .label-title {
+  font-size: 16px !important;
+  color: #333;
+  line-height: 24px;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 440;
+  margin-top: 10px;
+}
+.ant-form-item-control-input-content .label-title {
   font-size: 16px !important;
   color: #333;
   line-height: 24px;
@@ -153,6 +156,10 @@ label {
 .ant-modal-content {
   width: 125%;
 }
+.ant-space-item .ant-input.input_sum {
+  height: 50px;
+}
+
 @media screen and (max-width: 1400px) {
   form#dynamic_rule {
     /* transition: transform 250ms; */
@@ -162,6 +169,12 @@ label {
   }
   .ant-modal.user-modal .ant-modal-content {
     width: 100%;
+  }
+  .ant-space-item .ant-radio-button-wrapper.radio_button {
+    padding: 5px 40px;
+  }
+  .ant-space-item .ant-radio-button-wrapper.term-radio-button {
+    padding: 5px 50px;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -173,8 +186,9 @@ label {
 
   .ant-space.ant-space-horizontal.ant-space-align-center {
     display: grid;
-    grid-template-columns: 26% 26% 26% 26%;
+    grid-template-columns: 28% 28% 28% 28%;
   }
+
   button.ant-btn.ant-btn-primary {
     width: 100%;
     height: 45px;

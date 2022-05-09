@@ -18,6 +18,7 @@ export const fetchAllResult = (companyId) => async (dispatch) => {
     mop: "yearly",
     invest: "100000.00",
     "company_id[]": value,
+    features: [],
   };
   const q = queryString.stringify(data);
 

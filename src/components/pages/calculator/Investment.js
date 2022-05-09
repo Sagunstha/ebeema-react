@@ -45,6 +45,7 @@ export const Investment = ({
         <Radio.Group buttonStyle="solid" size="large">
           <Space>
             <Radio.Button
+              className="term-radio-button"
               value="1"
               onClick={() => {
                 setTerm("5");
@@ -54,6 +55,7 @@ export const Investment = ({
               5
             </Radio.Button>
             <Radio.Button
+              className="term-radio-button"
               value="2"
               onClick={() => {
                 setTerm("10");
@@ -63,6 +65,7 @@ export const Investment = ({
               10
             </Radio.Button>
             <Radio.Button
+              className="term-radio-button"
               value="3"
               onClick={() => {
                 setTerm("15");
@@ -72,6 +75,7 @@ export const Investment = ({
               15
             </Radio.Button>
             <Radio.Button
+              className="term-radio-button"
               value="4"
               onClick={() => {
                 setTerm("20");
@@ -81,6 +85,7 @@ export const Investment = ({
               20
             </Radio.Button>
             <Radio.Button
+              className="term-radio-button"
               value="5"
               onClick={() => {
                 setTerm("25");
@@ -90,6 +95,7 @@ export const Investment = ({
               25
             </Radio.Button>
             <Radio.Button
+              className="term-radio-button"
               value="6"
               onClick={() => {
                 setTerm("30");
@@ -99,6 +105,7 @@ export const Investment = ({
               30
             </Radio.Button>
             <Radio.Button
+              className="term-radio-button"
               value="7"
               onClick={() => {
                 setTerm("35");
@@ -112,7 +119,7 @@ export const Investment = ({
             </Title>
             <Input
               type="number"
-              style={{ marginBottom: 20 }}
+              style={{ marginBottom: 10 }}
               placeholder="Enter Your Term"
               className="input_sum"
               value={term}
@@ -147,6 +154,7 @@ export const Investment = ({
                 5Lakhs
               </Radio.Button>
               <Radio.Button
+                className="radio_button"
                 value="b"
                 onClick={() => {
                   setSum("1000000");
@@ -156,6 +164,7 @@ export const Investment = ({
                 10Lakhs
               </Radio.Button>
               <Radio.Button
+                className="radio_button"
                 value="c"
                 onClick={() => {
                   setSum("1500000");
@@ -165,6 +174,7 @@ export const Investment = ({
                 15Lakhs
               </Radio.Button>
               <Radio.Button
+                className="radio_button"
                 value="d"
                 onClick={() => {
                   setSum("2000000");
@@ -174,6 +184,7 @@ export const Investment = ({
                 20Lakhs
               </Radio.Button>
               <Radio.Button
+                className="radio_button"
                 value="e"
                 onClick={() => {
                   setSum("2500000");
@@ -183,6 +194,7 @@ export const Investment = ({
                 25Lakhs
               </Radio.Button>
               <Radio.Button
+                className="radio_button"
                 value="f"
                 onClick={() => {
                   setSum("5000000");
@@ -197,7 +209,7 @@ export const Investment = ({
                 placeholder="Enter your Sum Assured"
                 className="input_sum"
                 value={sum}
-                style={{ marginBottom: 20 }}
+                style={{ marginBottom: 10 }}
                 required
                 onChange={(e) => {
                   console.log(":::", e.target.value);
@@ -220,7 +232,7 @@ export const Investment = ({
         <Input
           type="number"
           placeholder="Enter your Investment"
-          style={{ width: 250, height: 45 }}
+          style={{ width: 250, height: 50 }}
           value={investment}
           required
           onChange={(e) => {

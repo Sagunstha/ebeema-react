@@ -11,6 +11,7 @@ const Result = () => {
   const [age, setAge] = useState();
   const [sum, setSum] = useState();
   const [term, setTerm] = useState();
+  const [featureCheckbox, setFeatureCheckBox] = useState();
 
   useEffect(() => {
     if (location.state) {
@@ -38,10 +39,19 @@ const Result = () => {
             setAge={setAge}
             setTerm={setTerm}
             setSum={setSum}
+            setFeatureCheckBox={setFeatureCheckBox}
+            featureCheckbox={featureCheckbox}
           />
         </div>
         <div className="table-section">
-          <Table sum={sum} term={term} category={category} setAge={setAge} />
+          <Table
+            sum={sum}
+            term={term}
+            category={category}
+            setAge={setAge}
+            setFeatureCheckBox={setFeatureCheckBox}
+            featureCheckbox={featureCheckbox}
+          />
         </div>
       </div>
     </>

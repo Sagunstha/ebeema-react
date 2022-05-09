@@ -403,12 +403,12 @@ const Calculator = () => {
                 <DatePicker
                   disabledDate={disabledDate}
                   onChange={onChange}
-                  style={{ height: 40, width: 222 }}
+                  style={{ height: 50, width: 222 }}
                 />
                 <Input
                   value={childAge}
                   style={{
-                    height: 40,
+                    height: 50,
                     width: 110,
                     marginLeft: 20,
                     boxShadow:
@@ -430,12 +430,12 @@ const Calculator = () => {
                 <DatePicker
                   disabledDate={disabledDate}
                   onChange={onProposerAgeChange}
-                  style={{ height: 40, width: 222 }}
+                  style={{ height: 50, width: 222 }}
                 />
                 <Input
                   value={proposerAge}
                   style={{
-                    height: 40,
+                    height: 50,
                     width: 110,
                     marginLeft: 20,
                     boxShadow:
@@ -470,12 +470,12 @@ const Calculator = () => {
                 <DatePicker
                   disabledDate={disabledDate}
                   onChange={onChange}
-                  style={{ height: 40, width: 222 }}
+                  style={{ height: 50, width: 222 }}
                 />
                 <Input
                   value={husbandAge}
                   style={{
-                    height: 40,
+                    height: 50,
                     width: 110,
                     marginLeft: 20,
                     boxShadow:
@@ -497,12 +497,12 @@ const Calculator = () => {
                 <DatePicker
                   disabledDate={disabledDate}
                   onChange={onWifeAgeChange}
-                  style={{ height: 40, width: 222 }}
+                  style={{ height: 50, width: 222 }}
                 />
                 <Input
                   value={wifeAge}
                   style={{
-                    height: 40,
+                    height: 50,
                     width: 110,
                     marginLeft: 20,
                     boxShadow:
@@ -523,18 +523,18 @@ const Calculator = () => {
               </Tooltip>
             </label>
             <br />
-            <Radio style={{ marginRight: 40 }}>AD</Radio>
+            <Radio style={{ marginRight: 50 }}>AD</Radio>
             <DatePicker
               disabledDate={disabledDate}
               onChange={onChange}
-              style={{ height: 40, width: 222 }}
+              style={{ height: 50, width: 222 }}
             />
             <Input
               value={age}
               placeholder="0"
               maxlength="0"
               style={{
-                height: 40,
+                height: 50,
                 width: 110,
                 marginLeft: 20,
                 boxShadow:

@@ -238,14 +238,19 @@ th {
   padding: 0px 10px;
 }
 
-.availablefeatures-name {
-  font-size: 12px;
-  display: flex;
-  justify-content: space-between;
-}
 .ant-modal.view-modal .ant-modal-content {
   border-radius: 15px !important;
   width: 150%;
+}
+.ant-modal.view-modal .ant-modal-content .ant-modal-header {
+  border-radius: 25px 25px 0 0;
+}
+
+button.ant-btn.ant-btn-primary.ant-btn-lg.view-modal-button {
+  float: right;
+}
+.fa-icon {
+  float: right;
 }
 .cross-fa {
   color: #f03b67;
@@ -254,6 +259,7 @@ th {
   color: #17b443;
   font-size: 14px;
 }
+
 /* .benefits-details {
   width: 100%;
   object-fit: contain;

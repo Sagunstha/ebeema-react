@@ -2,35 +2,36 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAllResult } from "../../redux/calculatorResult/resultAction";
 import { Modal } from "antd";
+import { useNavigate } from "react-router-dom";
 
-const Table = ({ sum, term, category, setAge }) => {
+const Table = ({
+  sum,
+  term,
+  category,
+  setAge,
+  setFeatureCheckBox,
+  featureCheckbox,
+}) => {
   const results = useSelector((state) => state.allResults.results);
   console.log("results", results);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const [resultcontent, setResultContent] = useState([]);
   const [viewplan, setViewPlan] = useState(false);
   const [modalData, setModalData] = useState();
-  const [showviewModal, setViewShowModal] = useState(false);
-  const [showfaicon, setShowFaIcon] = useState(true);
 
-  const toggleIcon = () => {
-    setShowFaIcon(!showfaicon);
-  };
-
-  // function onChange(date) {
-  //   const userDOB = moment(date, "YYYY/M/D");
-  //   const calAge = moment().diff(userDOB, "years");
-  //   setAge(calAge);
-  // }
   useEffect(() => {
     if (results?.data) {
       setResultContent(Object.values(results.data.products));
     }
   }, [results]);
+
   useEffect(() => {
     setModalData(resultcontent);
   }, [resultcontent]);
-  console.log("resultcontent", resultcontent);
+  // console.log("resultcontent", resultcontent);
+
   useEffect(() => {
     dispatch(fetchAllResult());
   }, []);
@@ -38,13 +39,21 @@ const Table = ({ sum, term, category, setAge }) => {
   const showViewPlan = () => {
     setViewPlan(true);
   };
+
   const handleViewPlan = () => {
     setViewPlan(false);
   };
-  const showViewModal = () => {
-    setViewShowModal(true);
+  const confirmation = () => {
+    if (sum) {
+      navigate("/confirm", {
+        state: { sum, term, category },
+      });
+    } else {
+      console.log("error");
+    }
   };
-  console.log("modalDAta", modalData);
+
+  console.log("featureCheckbox", featureCheckbox);
   return (
     <div className="">
       <div className="compare-header-info">
@@ -134,20 +143,25 @@ const Table = ({ sum, term, category, setAge }) => {
                       {data.availableFeatures.map((word) => (
                         <div>
                           <p className="availablefeatures-name">
-                            <span>{word.name}</span>
-                            {/* <a onClick={toggleIcon}>
-                              {showfaicon ? (
-                                <i
-                                  class="fa fa-times to-right cross-fa"
-                                  aria-hidden="true"
-                                />
-                              ) : (
+                            <span style={{ color: "#616161", fontSize: 13 }}>
+                              {word.name}
+                            </span>
+                            {featureCheckbox?.includes(word.id) ? (
+                              <div className="fa-icon">
                                 <i
                                   class="fa fa-check-circle"
                                   aria-hidden="true"
                                 />
-                              )}
-                            </a> */}
+                              </div>
+                            ) : (
+                              <div className="fa-icon">
+                                <i
+                                  class="fa fa-times to-right cross-fa"
+                                  aria-hidden="true"
+                                />
+                              </div>
+                            )}
+                            <a></a>
                           </p>
                         </div>
                       ))}
@@ -168,7 +182,12 @@ const Table = ({ sum, term, category, setAge }) => {
                       </a>
 
                       <br />
-                      <button className="select-plan-button">
+                      <button
+                        className="select-plan-button"
+                        onClick={() => {
+                          confirmation();
+                        }}
+                      >
                         Select Plan
                       </button>
                     </div>
@@ -182,7 +201,7 @@ const Table = ({ sum, term, category, setAge }) => {
           className="view-modal"
           visible={viewplan}
           title="View Plan"
-          style={{ top: "1%" }}
+          style={{ top: "5%", right: 100 }}
           footer={null}
           maskClosable={false}
           onCancel={handleViewPlan}
