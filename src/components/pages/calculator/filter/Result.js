@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Filter from "./Filter";
 import Table from "./Table";
-import "./Index.css";
+import "./Result.css";
 import { Link, useLocation } from "react-router-dom";
 
 const Result = () => {

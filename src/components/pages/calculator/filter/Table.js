@@ -179,7 +179,7 @@ const Table = ({ sum, term, category, setAge }) => {
           </div>
         ))}
         <Modal
-          className="user-modal"
+          className="view-modal"
           visible={viewplan}
           title="View Plan"
           style={{ top: "1%" }}
@@ -210,6 +210,17 @@ const Table = ({ sum, term, category, setAge }) => {
           </div>
         </Modal>
       </div>
+      <p
+        style={{
+          fontSize: 14,
+          lineHeight: 1.42857143,
+          color: "#333",
+          paddingTop: 20,
+        }}
+      >
+        *Maturity Value is subject to change as per each year's bonus rate
+        published by Beema Samiti.
+      </p>
     </div>
   );
 };

@@ -24,6 +24,12 @@ export const Investment = ({
       console.log("result", result);
     }
   }
+  function handleInvestment(e) {
+    const lastSum = (term * e.target.value).toFixed(2);
+    // console.log("sum", lastSum, term);
+    console.log("lastSum", lastSum);
+    setSum(lastSum);
+  }
 
   return (
     <>
@@ -110,12 +116,11 @@ export const Investment = ({
               placeholder="Enter Your Term"
               className="input_sum"
               value={term}
-              rules={[
-                {
-                  required: true,
-                  message: "Please select province",
-                },
-              ]}
+              required
+              onChange={(e) => {
+                console.log(":::", e.target.value);
+                setTerm(e.target.value);
+              }}
             />
           </Space>
         </Radio.Group>
@@ -193,12 +198,11 @@ export const Investment = ({
                 className="input_sum"
                 value={sum}
                 style={{ marginBottom: 20 }}
-                rules={[
-                  {
-                    required: true,
-                    message: "Please select province",
-                  },
-                ]}
+                required
+                onChange={(e) => {
+                  console.log(":::", e.target.value);
+                  setSum(e.target.value);
+                }}
               />
             </Space>
             {/* style={{ width: 200,marginLeft: 82, height: 45}} */}
@@ -218,12 +222,12 @@ export const Investment = ({
           placeholder="Enter your Investment"
           style={{ width: 250, height: 45 }}
           value={investment}
-          rules={[
-            {
-              required: true,
-              message: "Please select province",
-            },
-          ]}
+          required
+          onChange={(e) => {
+            handleInvestment(e);
+            console.log(":::", e.target.value);
+            setInvestment(e.target.value);
+          }}
         />
       </Form.Item>
     </>

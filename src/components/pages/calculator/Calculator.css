@@ -13,17 +13,19 @@ form#dynamic_rule {
 }
 
 .ant-select.dropdown-category.ant-select-single.ant-select-show-arrow {
-  width: 200px;
+  width: 225px;
+}
+.ant-select.dropdown-category.ant-select-single.ant-select-show-arrow
+  .ant-select-selector {
+  height: 40px;
+  padding: 5px 11px;
 }
 
-.ant-select-selector {
-  padding: 0x 11px;
-}
 .ant-modal.user-modal .ant-modal-content {
   border-radius: 15px !important;
-  width: 150%;
+  width: 130%;
   top: 150px;
-  right: 120px;
+  right: 100px;
 }
 .ant-modal.user-modal .ant-modal-content .ant-modal-header {
   background-color: #fafafa;
@@ -31,11 +33,11 @@ form#dynamic_rule {
 }
 .ant-modal.user-modal .ant-modal-content .ant-modal-header .ant-modal-title {
   font-size: 18px !important ;
-  padding: 0 2%;
+
   color: #3d538c !important;
 }
 .ant-modal.user-modal .ant-modal-body {
-  padding: 20px !important;
+  padding: 10px !important;
 }
 button.ant-btn.ant-btn-primary.ant-btn-lg.user-modal-button {
   float: right;
@@ -66,6 +68,7 @@ span.ant-radio-button.ant-radio-button-checked:focus {
 .select-category {
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
 }
 .info-para {
   margin-left: 30px !important;

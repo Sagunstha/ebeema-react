@@ -18,7 +18,7 @@ import {
 } from "antd";
 import moment from "moment";
 import SelectInput from "@material-ui/core/Select/SelectInput";
-import "./Index.css";
+import "./Result.css";
 // import uniqBy from "lodash";
 
 const Filter = ({ age, term, sum, setAge, setTerm, setSum }) => {
@@ -136,16 +136,18 @@ const Filter = ({ age, term, sum, setAge, setTerm, setSum }) => {
           <div className="compare-list">
             <h3 className="filter-dob">Date of Birth</h3>
             <DatePicker
+              className="filter-datepicker"
               disabledDate={disabledDate}
               onChange={onDateChange}
-              style={{ height: 40, width: 222 }}
+              style={{ height: 40, width: "100%" }}
             />
             <Input
               value={age}
               style={{
+                width: "100%",
                 height: 40,
-                width: 110,
-                marginLeft: 20,
+                border: "none",
+                outline: "none",
               }}
             />
           </div>
@@ -158,13 +160,11 @@ const Filter = ({ age, term, sum, setAge, setTerm, setSum }) => {
           <h3 className="filter-dob">Term</h3>
 
           <Select
+            className="dropdown-category"
             value={term}
-            style={{
-              // bordered: "false",
-              outline: "none",
-            }}
             onChange={onTermChange}
             onClick={onOptionclick}
+            style={{ width: "100%" }}
           >
             {termOption?.map((item, index) => (
               <Option key={index}>{item}</Option>
@@ -177,7 +177,21 @@ const Filter = ({ age, term, sum, setAge, setTerm, setSum }) => {
           name="filtersum"
         >
           <h3>Sum Assured</h3>
-          {sum}
+          <input
+            type="text"
+            style={{
+              width: "100%",
+              height: 40,
+              border: "none",
+              outline: "none",
+            }}
+            value={sum}
+            onChange={(e) => {
+              // handleTerm(e);
+              console.log(":::", e.target.value);
+              setSum(e.target.value);
+            }}
+          />
         </Form.Item>
 
         <Form.Item style={{ borderBottom: "1px solid #e0e0e0", padding: 15 }}>
@@ -187,6 +201,7 @@ const Filter = ({ age, term, sum, setAge, setTerm, setSum }) => {
             onClick={onOptionclick}
             className="dropdown-category"
             placeholder="Select A Mop"
+            style={{ width: "100%" }}
           >
             {modeofpayment?.map((item, index) => (
               <Option key={index}>{item}</Option>
@@ -195,8 +210,7 @@ const Filter = ({ age, term, sum, setAge, setTerm, setSum }) => {
         </Form.Item>
 
         <Form.Item style={{ borderBottom: "1px solid #e0e0e0", padding: 15 }}>
-          <p>Company</p>
-          <br />
+          <p className="filter-subtitle">Company</p>{" "}
           <Checkbox.Group style={{ width: "100%" }} onChange={onCompanyChange}>
             {uniqueCompany?.map((item, index) => (
               <div key={item.id}>
@@ -207,8 +221,7 @@ const Filter = ({ age, term, sum, setAge, setTerm, setSum }) => {
         </Form.Item>
 
         <Form.Item style={{ borderBottom: "1px solid #e0e0e0", padding: 15 }}>
-          <p>Feature</p>
-          <br />
+          <p className="filter-subtitle">Feature</p>
           <Checkbox.Group style={{ width: "100%" }} onChange={onFeatureChange}>
             {uniqueFeature?.map((item, index) => (
               <div key={item.id}>

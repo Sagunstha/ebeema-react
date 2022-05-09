@@ -95,6 +95,7 @@ span.ant-checkbox-inner {
   text-align: center;
   color: rgba(5, 12, 69, 0.8);
   margin-bottom: 0;
+  letter-spacing: 10px;
   /* margin-top: 20px; */
 }
 .term-items {
@@ -242,7 +243,7 @@ th {
   display: flex;
   justify-content: space-between;
 }
-.ant-modal.user-modal .ant-modal-content {
+.ant-modal.view-modal .ant-modal-content {
   border-radius: 15px !important;
   width: 150%;
 }
@@ -258,8 +259,22 @@ th {
   object-fit: contain;
   height: 400px;
 } */
+.ant-select.ant-select-sm.dropdown-category.ant-select-single.ant-select-show-arrow
+  .ant-select-selector {
+  border: none !important;
+}
+.ant-form.ant-form-horizontal.ant-form-small.filter-form
+  .ant-row.ant-form-item {
+  margin-bottom: 0;
+}
+.ant-form-item-control-input-content .filter-subtitle {
+  color: #3a6da7;
+  font-size: 15px;
+  font-weight: 400;
+}
+
 @media screen and (max-width: 1400px) {
-  .ant-modal.user-modal .ant-modal-content {
+  .ant-modal.view-modal .ant-modal-content {
     border-radius: 15px !important;
     width: 100%;
     right: -3%;
