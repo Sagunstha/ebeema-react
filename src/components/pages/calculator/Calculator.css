@@ -159,6 +159,14 @@ label {
 .ant-space-item .ant-input.input_sum {
   height: 50px;
 }
+.ant-form-item-control-input-content
+  .ant-btn.ant-btn-primary.ant-btn-lg.user-modal-button {
+  color: #fff;
+  font-size: 18px !important;
+  padding: 5px 30px !important;
+  border-radius: 4 !important;
+  background: #3d538c;
+}
 
 @media screen and (max-width: 1400px) {
   form#dynamic_rule {

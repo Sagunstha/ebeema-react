@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllResult } from "../../redux/calculatorResult/resultAction";
+import {
+  fetchAllResult,
+  fetchSelectedResult,
+} from "../../redux/calculatorResult/resultAction";
 import { Modal } from "antd";
 import { useNavigate } from "react-router-dom";
 
@@ -11,8 +14,11 @@ const Table = ({
   setAge,
   setFeatureCheckBox,
   featureCheckbox,
+  companyCheckbox,
+  setCompanyCheckbox,
 }) => {
   const results = useSelector((state) => state.allResults.results);
+  const filterresult = useSelector((state) => state.result);
   console.log("results", results);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -20,17 +26,22 @@ const Table = ({
   const [resultcontent, setResultContent] = useState([]);
   const [viewplan, setViewPlan] = useState(false);
   const [modalData, setModalData] = useState();
-
+  console.log("Checkbox", companyCheckbox);
   useEffect(() => {
     if (results?.data) {
       setResultContent(Object.values(results.data.products));
     }
-  }, [results]);
+  }, [results.data]);
+  useEffect(() => {
+    if (filterresult?.data) {
+      setResultContent(Object.values(filterresult?.data?.products));
+    }
+  }, [filterresult?.data]);
 
   useEffect(() => {
     setModalData(resultcontent);
   }, [resultcontent]);
-  // console.log("resultcontent", resultcontent);
+  console.log("resultcontent", resultcontent);
 
   useEffect(() => {
     dispatch(fetchAllResult());
@@ -52,8 +63,9 @@ const Table = ({
       console.log("error");
     }
   };
+  function onclickcheckbox() {}
 
-  console.log("featureCheckbox", featureCheckbox);
+  // console.log("featureCheckbox", featureCheckbox);
   return (
     <div className="">
       <div className="compare-header-info">
@@ -174,7 +186,7 @@ const Table = ({
                         className="view-plan-button"
                         onClick={() => {
                           setModalData(data);
-                          console.log("data", data);
+                          // console.log("data", data);
                           showViewPlan();
                         }}
                       >

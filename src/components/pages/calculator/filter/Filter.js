@@ -1,23 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  fetchAllResult,
-  fetchSelectedResult,
-} from "../../redux/calculatorResult/resultAction";
-import {
-  Form,
-  Input,
-  Checkbox,
-  Button,
-  DatePicker,
-  Select,
-  Tooltip,
-  Row,
-  Col,
-} from "antd";
+import { fetchSelectedResult } from "../../redux/calculatorResult/resultAction";
+import { Form, Input, Checkbox, DatePicker, Select } from "antd";
 import moment from "moment";
-import SelectInput from "@material-ui/core/Select/SelectInput";
 import "./Result.css";
 // import uniqBy from "lodash";
 
@@ -30,20 +15,22 @@ const Filter = ({
   setSum,
   featureCheckbox,
   setFeatureCheckBox,
+  companyCheckbox,
+  setCompanyCheckbox,
+  category,
 }) => {
   const [form] = Form.useForm();
   const { Option } = Select;
 
   const results = useSelector((state) => state.allResults.results);
-  const filterresult = useSelector((state) => state.result);
   const dispatch = useDispatch();
   const [filtercontent, setFilterContent] = useState();
-  console.log("filterresult", filterresult);
   const [termOption, setTermOption] = useState([]);
   const [uniqueCompany, setUniqueCompany] = useState([]);
+
   const [uniqueFeature, setUniqueFeature] = useState([]);
   const [modeofpayment, setModeOfPayment] = useState([]);
-  console.log("uniqueCompany", uniqueCompany);
+  // console.log("uniqueCompany", uniqueCompany);
   // useEffect(() => {
   //   filtercontent?.map((item) => {
   //     console.log("item", item["company"]);
@@ -80,22 +67,11 @@ const Filter = ({
     if (results?.data) {
       setFilterContent(Object.values(results.data.products));
       setTermOption(results.data.terms);
+      setUniqueCompany(results.data.companies);
       setUniqueFeature(results.data.features);
       setModeOfPayment(results.data.mops);
     }
   }, [results]);
-  useEffect(() => {
-    if (filterresult?.data) {
-      setFilterContent(Object.values(filterresult?.data?.products));
-      setUniqueCompany(filterresult.data.companies);
-    }
-  }, [filterresult]);
-
-  useEffect(() => {
-    dispatch(fetchAllResult());
-    dispatch(fetchSelectedResult());
-  }, []);
-  // console.log("filtercontent", filtercontent);
 
   function onMOPChange(e) {
     console.log("e");
@@ -122,9 +98,24 @@ const Filter = ({
   }, []);
 
   function onCompanyChange(checkedValues) {
-    console.log("checked = ", checkedValues);
-    dispatch(fetchAllResult(checkedValues));
-    console.log("action called");
+    console.log("checked  ", checkedValues);
+    let value = checkedValues || [];
+    const data = {
+      category: category,
+      age: age,
+      child_age: "0",
+      proposer_age: "0",
+      husband_age: "0",
+      wife_age: "0",
+      term: term,
+      sum_assured: sum,
+      mop: "yearly",
+      invest: "100000.00",
+      "company_id[]": value,
+      features: [],
+    };
+    setCompanyCheckbox(checkedValues);
+    dispatch(fetchSelectedResult(data));
   }
   function onFeatureChange(checkedfeatureValues) {
     console.log("checked  ", checkedfeatureValues);

@@ -8,7 +8,6 @@ import {
   DatePicker,
   Typography,
   Select,
-  notification,
   Tooltip,
   Modal,
 } from "antd";
@@ -34,7 +33,6 @@ const Calculator = () => {
   const [minAge, setMinAge] = useState();
   const [maxAge, setMaxAge] = useState();
   const [err, setErr] = useState();
-  const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(false);
 
   const initialValues = { Name: "", phoneNo: "", email: "" };
@@ -62,9 +60,6 @@ const Calculator = () => {
     dispatch(fetchAllCategory()); //action import garera useeffet
   }, []);
 
-  const onSubmitHandler = (e) => {
-    e.preventDefault();
-  };
   const validityCheck = (age, term, sum) => {
     if (age >= 0 && term && sum) {
       showModal();
@@ -207,17 +202,22 @@ const Calculator = () => {
     const userDOB = moment(date, "YYYY/M/D");
     const calAge = moment().diff(userDOB, "years");
 
-    const openNotificationWithIcon = (type) => {
-      // console.log("type", type);
-      notification[type]({
-        message: "",
-        description: `${calAge} is not compactible age. Age from 18 to 60 is only allowed !`,
+    function AgeLimitAlert() {
+      Swal.fire({
+        position: "top-end",
+        //   allowOutsideClick: false,
+        icon: "warning",
+
+        html: `${calAge} is not compactible age. Age from 18 to 60 is only allowed`,
+        timerProgressBar: true,
+        timer: 2500,
+        width: 300,
       });
-    };
+    }
     if (info) {
       setProposerAge(calAge);
       if (calAge < `${minAge}` || calAge > `${maxAge}`) {
-        openNotificationWithIcon("warning");
+        return AgeLimitAlert();
       }
     } else {
     }
@@ -227,17 +227,22 @@ const Calculator = () => {
     const userDOB = moment(date, "YYYY/M/D");
     const calAge = moment().diff(userDOB, "years");
 
-    const openNotificationWithIcon = (type) => {
-      // console.log("type", type);
-      notification[type]({
-        message: "",
-        description: `${calAge} is not compactible age. Age from 20 to 50 is only allowed !`,
+    function AgeLimitAlert() {
+      Swal.fire({
+        position: "top-end",
+        //   allowOutsideClick: false,
+        icon: "warning",
+
+        html: `${calAge} is not compactible age. Age from 18 to 60 is only allowed`,
+        timerProgressBar: true,
+        timer: 2500,
+        width: 300,
       });
-    };
+    }
     if (info) {
       setWifeAge(calAge);
       if (calAge < `${minAge}` || calAge > `${maxAge}`) {
-        openNotificationWithIcon("warning");
+        return AgeLimitAlert();
       }
     } else {
     }
