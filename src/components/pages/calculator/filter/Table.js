@@ -63,7 +63,6 @@ const Table = ({
       console.log("error");
     }
   };
-  function onclickcheckbox() {}
 
   // console.log("featureCheckbox", featureCheckbox);
   return (
@@ -88,7 +87,20 @@ const Table = ({
       </div>
       <div className="compare-search-sort">
         <p className="left-sort">{category} : Plans match your search</p>
-        <div className="right-sort"></div>
+        <div className="right-sort">
+          <div className="sort-box">
+            <p>
+              <img className="filter-icon" src="./image/fliter.png" alt="" />
+              &nbsp;&nbsp;
+              <span className="sortChange">Maturity:</span>&nbsp;&nbsp;
+              <img
+                className="sort-down-arrow"
+                src="./image/down-arrow.svg"
+                alt=""
+              />
+            </p>
+          </div>
+        </div>
       </div>
       <div className="compare-plans">
         {resultcontent.map((data, index) => (

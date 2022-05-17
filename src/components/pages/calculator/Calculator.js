@@ -281,6 +281,11 @@ const Calculator = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
   };
+  // const ageNaN = () => {
+  //   if (isNaN(age)) {
+  //     return (setAge = 0);
+  //   } else return age;
+  // };
 
   return (
     <div className="compare__calclulator">
@@ -386,15 +391,6 @@ const Calculator = () => {
 
         {info === "children" ? (
           <Form.Item>
-            <label className="label-title">
-              Select Date Type
-              <Tooltip placement="top" title="Select date type">
-                <BsFillInfoCircleFill style={tooltipStyle} />
-              </Tooltip>
-            </label>
-            <br />
-            <Radio style={{ marginRight: 40 }}>AD</Radio>
-
             <div className="age_section">
               <div className="leftage_section">
                 <label className="label-title">
@@ -411,7 +407,7 @@ const Calculator = () => {
                   style={{ height: 50, width: 222 }}
                 />
                 <Input
-                  value={childAge}
+                  value={isNaN(childAge) ? 0 : childAge}
                   style={{
                     height: 50,
                     width: 110,
@@ -438,7 +434,7 @@ const Calculator = () => {
                   style={{ height: 50, width: 222 }}
                 />
                 <Input
-                  value={proposerAge}
+                  value={isNaN(proposerAge) ? 0 : proposerAge}
                   style={{
                     height: 50,
                     width: 110,
@@ -454,14 +450,6 @@ const Calculator = () => {
           </Form.Item>
         ) : info === "couple" ? (
           <Form.Item>
-            <label className="label-title">
-              Select Date Type
-              <Tooltip placement="top" title="Select date type">
-                <BsFillInfoCircleFill style={tooltipStyle} />
-              </Tooltip>
-            </label>
-            <br />
-            <Radio style={{ marginRight: 40 }}>AD</Radio>
             <div className="age_section">
               <div className="leftage_section">
                 <label className="label-title">
@@ -478,7 +466,7 @@ const Calculator = () => {
                   style={{ height: 50, width: 222 }}
                 />
                 <Input
-                  value={husbandAge}
+                  value={isNaN(husbandAge) ? 0 : husbandAge}
                   style={{
                     height: 50,
                     width: 110,
@@ -505,7 +493,7 @@ const Calculator = () => {
                   style={{ height: 50, width: 222 }}
                 />
                 <Input
-                  value={wifeAge}
+                  value={isNaN(wifeAge) ? 0 : wifeAge}
                   style={{
                     height: 50,
                     width: 110,
@@ -528,16 +516,14 @@ const Calculator = () => {
               </Tooltip>
             </label>
             <br />
-            <Radio style={{ marginRight: 50 }}>AD</Radio>
+
             <DatePicker
               disabledDate={disabledDate}
               onChange={onChange}
               style={{ height: 50, width: 222 }}
             />
             <Input
-              value={age}
-              placeholder="0"
-              maxlength="0"
+              value={isNaN(age) ? 0 : age}
               style={{
                 height: 50,
                 width: 110,

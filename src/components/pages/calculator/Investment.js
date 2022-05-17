@@ -141,67 +141,71 @@ export const Investment = ({
         </label>
         <br />
         <Form.Item>
-          <Radio.Group buttonStyle="solid" size="large">
+          <Radio.Group
+            className="Sum-Radio-Group"
+            buttonStyle="solid"
+            size="large"
+          >
             <Space>
               <Radio.Button
-                className="radio_button"
+                className="sum-radio-button"
                 value="a"
                 onClick={() => {
                   setSum("500000");
                   DivideNumber(term, sum);
                 }}
               >
-                5Lakhs
+                5 Lakhs
               </Radio.Button>
               <Radio.Button
-                className="radio_button"
+                className="sum-radio-button"
                 value="b"
                 onClick={() => {
                   setSum("1000000");
                   DivideNumber(term, sum);
                 }}
               >
-                10Lakhs
+                10 Lakhs
               </Radio.Button>
               <Radio.Button
-                className="radio_button"
+                className="sum-radio-button"
                 value="c"
                 onClick={() => {
                   setSum("1500000");
                   DivideNumber(term, sum);
                 }}
               >
-                15Lakhs
+                15 Lakhs
               </Radio.Button>
               <Radio.Button
-                className="radio_button"
+                className="sum-radio-button"
                 value="d"
                 onClick={() => {
                   setSum("2000000");
                   DivideNumber(term, sum);
                 }}
               >
-                20Lakhs
+                20 Lakhs
               </Radio.Button>
               <Radio.Button
-                className="radio_button"
+                className="sum-radio-button"
                 value="e"
                 onClick={() => {
                   setSum("2500000");
                   DivideNumber(term, sum);
                 }}
               >
-                25Lakhs
+                25 Lakhs
               </Radio.Button>
               <Radio.Button
-                className="radio_button"
+                className="sum-radio-button"
                 value="f"
                 onClick={() => {
                   setSum("5000000");
                   DivideNumber(term, sum);
                 }}
               >
-                50Lakhs
+                50 Lakhs
               </Radio.Button>
               <Title level={5}>OR</Title>
               <Input

@@ -30,6 +30,7 @@ const Filter = ({
 
   const [uniqueFeature, setUniqueFeature] = useState([]);
   const [modeofpayment, setModeOfPayment] = useState([]);
+  const [mop, setMop] = useState();
   // console.log("uniqueCompany", uniqueCompany);
   // useEffect(() => {
   //   filtercontent?.map((item) => {
@@ -76,10 +77,10 @@ const Filter = ({
   function onMOPChange(e) {
     console.log("e");
   }
-  function onTermChange(e) {
-    console.log(`m`, e);
-    setTerm(e);
-  }
+  // function onTermChange(e) {
+  //   console.log(`m`, e);
+  //   setTerm(e);
+  // }
   function onOptionclick(e) {
     // e.preventdefault();
     console.log("e");
@@ -96,6 +97,7 @@ const Filter = ({
   useEffect(() => {
     onDateChange();
   }, []);
+  console.log("mopp", mop);
 
   function onCompanyChange(checkedValues) {
     console.log("checked  ", checkedValues);
@@ -109,7 +111,7 @@ const Filter = ({
       wife_age: "0",
       term: term,
       sum_assured: sum,
-      mop: "yearly",
+      mop: mop,
       invest: "100000.00",
       "company_id[]": value,
       features: [],
@@ -139,7 +141,7 @@ const Filter = ({
               style={{ height: 40, width: "100%" }}
             />
             <Input
-              value={age}
+              value={isNaN(age) ? 0 : age}
               style={{
                 width: "100%",
                 height: 40,
@@ -159,12 +161,14 @@ const Filter = ({
           <Select
             className="dropdown-category"
             value={term}
-            onChange={onTermChange}
+            onChange={(value) => {
+              setTerm(value);
+            }}
             onClick={onOptionclick}
             style={{ width: "100%" }}
           >
-            {termOption?.map((item, index) => (
-              <Option key={index}>{item}</Option>
+            {termOption?.map((item) => (
+              <Option key={item}>{item}</Option>
             ))}
           </Select>
         </Form.Item>
@@ -194,14 +198,16 @@ const Filter = ({
         <Form.Item style={{ borderBottom: "1px solid #e0e0e0", padding: 15 }}>
           <h3>Mode of Payment</h3>
           <Select
-            onChange={onMOPChange}
+            onChange={(value, index) => {
+              setMop(value);
+            }}
             onClick={onOptionclick}
             className="dropdown-category"
             placeholder="Select A Mop"
             style={{ width: "100%" }}
           >
             {modeofpayment?.map((item, index) => (
-              <Option key={index}>{item}</Option>
+              <Option key={item}>{item}</Option>
             ))}
           </Select>
         </Form.Item>
