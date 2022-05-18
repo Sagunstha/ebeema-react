@@ -64,14 +64,14 @@ const Table = ({
     }
   };
 
-  resultcontent.map((data) => {
-    console.log("data", data.premiumAmount);
+  // resultcontent.map((data) => {
+  //   console.log("data", data.premiumAmount);
 
-    // resultcontent.sort(function (x, y) {
-    //   return setPremiumAmount(x.data?.premiumAmount - y.data?.premiumAmount);
-    // });
-    // console.log("premiumAmount", premiumAmount);
-  });
+  //   // resultcontent.sort(function (x, y) {
+  //   //   return setPremiumAmount(x.data?.premiumAmount - y.data?.premiumAmount);
+  //   // });
+  //   // console.log("premiumAmount", premiumAmount);
+  // });
 
   // console.log("resultcontent", resultcontent);
   return (
@@ -98,26 +98,29 @@ const Table = ({
         <p className="left-sort">
           {category} : {resultcontent.length} Plans match your search
         </p>
-        <div className="right-sort">
-          <div className="sort-box">
-            <select>
-              <p>
-                <img className="filter-icon" src="./image/fliter.png" alt="" />
-                &nbsp;&nbsp;
-                <span className="sortChange">Sort by Relevance</span>
-                &nbsp;&nbsp;
-                <Option>uihsudcghdusig</Option>
-                <Option>uihsudcghdusig</Option>
-                <Option>uihsudcghdusig</Option>
-                <img
-                  className="sort-down-arrow"
-                  src="./image/down-arrow.svg"
-                  alt=""
-                />
-              </p>
-            </select>
-          </div>
-        </div>
+        {/* <div className="right-sort">
+          <div className="sort-box"> */}
+        <Select
+          className="sorting-dropdown"
+          placeholder="Sort by Relevance"
+          style={{ border: "none" }}
+        >
+          <Option>hello</Option>
+          <Option>hello</Option>
+        </Select>
+        {/* <p>
+              <img className="filter-icon" src="./image/fliter.png" alt="" />
+              &nbsp;&nbsp;
+              <span className="sortChange">Sort by Relevance</span>
+              &nbsp;&nbsp;
+              <img
+                className="sort-down-arrow"
+                src="./image/down-arrow.svg"
+                alt=""
+              />
+            </p> */}
+        {/* </div>
+        </div> */}
       </div>
       <div className="compare-plans">
         {resultcontent.map((data, index) => (

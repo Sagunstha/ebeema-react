@@ -74,15 +74,7 @@ const Filter = ({
     }
   }, [results]);
 
-  function onMOPChange(e) {
-    console.log("e");
-  }
-  // function onTermChange(e) {
-  //   console.log(`m`, e);
-  //   setTerm(e);
-  // }
   function onOptionclick(e) {
-    // e.preventdefault();
     console.log("e");
   }
   function onDateChange(date) {
@@ -97,7 +89,6 @@ const Filter = ({
   useEffect(() => {
     onDateChange();
   }, []);
-  // console.log("mopp", mop);
 
   function onCompanyChange(checkedValues) {
     console.log("checked  ", checkedValues);

@@ -30,6 +30,7 @@ export const fetchAllResult = () => async (dispatch) => {
   console.log("responsesssss", response);
   dispatch({ type: ActionTypes.SET_RESULT, payload: response.data });
 };
+
 export const fetchSelectedResult = (data) => async (dispatch) => {
   const q = queryString.stringify(data);
 

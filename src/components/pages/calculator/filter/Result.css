@@ -153,6 +153,13 @@ span.ant-checkbox-inner {
   height: 8px;
   opacity: 0.6;
 }
+.ant-select.sorting-dropdown.ant-select-single.ant-select-show-arrow {
+  float: right;
+}
+.ant-select.sorting-dropdown.ant-select-single.ant-select-show-arrow
+  .ant-select-selector {
+  margin: 0;
+}
 .img {
   vertical-align: middle;
 }
@@ -162,8 +169,8 @@ span.ant-checkbox-inner {
   font-size: 14px;
   line-height: 33px;
 }
-.left-sort {
-}
+/* .left-sort {
+} */
 .compare-plans {
   margin-top: 5px;
 }
