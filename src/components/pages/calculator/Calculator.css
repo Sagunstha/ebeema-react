@@ -173,22 +173,7 @@ label {
   .ant-space.ant-space-horizontal.ant-space-align-center {
   gap: 38px !important;
 }
-.right-sort {
-  float: right;
-}
-.sort-down-arrow {
-  height: 8px;
-  opacity: 0.6;
-}
-.img {
-  vertical-align: middle;
-}
-.sortChange {
-  color: #616161;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 33px;
-}
+
 @media screen and (max-width: 1400px) {
   form#dynamic_rule {
     /* transition: transform 250ms; */

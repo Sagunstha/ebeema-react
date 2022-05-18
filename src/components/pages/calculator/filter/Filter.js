@@ -97,7 +97,7 @@ const Filter = ({
   useEffect(() => {
     onDateChange();
   }, []);
-  console.log("mopp", mop);
+  // console.log("mopp", mop);
 
   function onCompanyChange(checkedValues) {
     console.log("checked  ", checkedValues);

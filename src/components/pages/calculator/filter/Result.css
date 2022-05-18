@@ -143,6 +143,26 @@ span.ant-checkbox-inner {
   float: left;
   margin: 0;
   line-height: 33px;
+  cursor: inherit;
+  color: #616161;
+}
+.right-sort {
+  float: right;
+}
+.sort-down-arrow {
+  height: 8px;
+  opacity: 0.6;
+}
+.img {
+  vertical-align: middle;
+}
+.sortChange {
+  color: #616161;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 33px;
+}
+.left-sort {
 }
 .compare-plans {
   margin-top: 5px;

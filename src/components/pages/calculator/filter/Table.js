@@ -4,7 +4,7 @@ import {
   fetchAllResult,
   fetchSelectedResult,
 } from "../../redux/calculatorResult/resultAction";
-import { Modal } from "antd";
+import { Modal, Select } from "antd";
 import { useNavigate } from "react-router-dom";
 
 const Table = ({
@@ -19,14 +19,14 @@ const Table = ({
 }) => {
   const results = useSelector((state) => state.allResults.results);
   const filterresult = useSelector((state) => state.result);
-  console.log("results", results);
+  // console.log("results", results);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  const { Option } = Select;
   const [resultcontent, setResultContent] = useState([]);
   const [viewplan, setViewPlan] = useState(false);
   const [modalData, setModalData] = useState();
-  console.log("Checkbox", companyCheckbox);
+  const [premiumAmount, setPremiumAmount] = useState();
   useEffect(() => {
     if (results?.data) {
       setResultContent(Object.values(results.data.products));
@@ -41,7 +41,7 @@ const Table = ({
   useEffect(() => {
     setModalData(resultcontent);
   }, [resultcontent]);
-  console.log("resultcontent", resultcontent);
+  // sconsole.log("resultcontent", resultcontent);
 
   useEffect(() => {
     dispatch(fetchAllResult());
@@ -64,7 +64,16 @@ const Table = ({
     }
   };
 
-  // console.log("featureCheckbox", featureCheckbox);
+  resultcontent.map((data) => {
+    console.log("data", data.premiumAmount);
+
+    // resultcontent.sort(function (x, y) {
+    //   return setPremiumAmount(x.data?.premiumAmount - y.data?.premiumAmount);
+    // });
+    // console.log("premiumAmount", premiumAmount);
+  });
+
+  // console.log("resultcontent", resultcontent);
   return (
     <div className="">
       <div className="compare-header-info">
@@ -86,19 +95,27 @@ const Table = ({
         </div>
       </div>
       <div className="compare-search-sort">
-        <p className="left-sort">{category} : Plans match your search</p>
+        <p className="left-sort">
+          {category} : {resultcontent.length} Plans match your search
+        </p>
         <div className="right-sort">
           <div className="sort-box">
-            <p>
-              <img className="filter-icon" src="./image/fliter.png" alt="" />
-              &nbsp;&nbsp;
-              <span className="sortChange">Maturity:</span>&nbsp;&nbsp;
-              <img
-                className="sort-down-arrow"
-                src="./image/down-arrow.svg"
-                alt=""
-              />
-            </p>
+            <select>
+              <p>
+                <img className="filter-icon" src="./image/fliter.png" alt="" />
+                &nbsp;&nbsp;
+                <span className="sortChange">Sort by Relevance</span>
+                &nbsp;&nbsp;
+                <Option>uihsudcghdusig</Option>
+                <Option>uihsudcghdusig</Option>
+                <Option>uihsudcghdusig</Option>
+                <img
+                  className="sort-down-arrow"
+                  src="./image/down-arrow.svg"
+                  alt=""
+                />
+              </p>
+            </select>
           </div>
         </div>
       </div>
@@ -151,13 +168,19 @@ const Table = ({
                   <td className="prem-box line-rht-cmp">
                     <div className="box-term-pay">
                       <p
-                        style={{ border: "1px solid #ddd", padding: "2px 4px" }}
+                        style={{
+                          border: "1px solid #ddd",
+                          padding: "2px 4px",
+                        }}
                       >
                         <strong>Term: </strong>
                         {data.currentTerm}Y
                       </p>
                       <p
-                        style={{ border: "1px solid #ddd", padding: "2px 4px" }}
+                        style={{
+                          border: "1px solid #ddd",
+                          padding: "2px 4px",
+                        }}
                       >
                         <strong>Pay Term: </strong>
                         {data.payingTerm}Y
