@@ -44,6 +44,7 @@ button.ant-btn.ant-btn-primary.ant-btn-lg.user-modal-button {
 }
 form#userInfo .ant-row.ant-form-item {
   margin-bottom: 15px !important;
+  /* margin: 20px; */
 }
 .ant-space-item .ant-radio-button-wrapper.term-radio-button {
   height: 50px;

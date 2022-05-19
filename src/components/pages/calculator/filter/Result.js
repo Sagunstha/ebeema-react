@@ -11,6 +11,8 @@ const Result = () => {
   const [age, setAge] = useState();
   const [sum, setSum] = useState();
   const [term, setTerm] = useState();
+  const [mop, setMop] = useState("yearly");
+  const [userFormValues, setUserFormValues] = useState();
   const [featureCheckbox, setFeatureCheckBox] = useState();
   const [companyCheckbox, setCompanyCheckbox] = useState();
 
@@ -20,6 +22,7 @@ const Result = () => {
       setAge(location.state.age);
       setSum(location.state.sum);
       setTerm(location.state.term);
+      setUserFormValues(location.state.userFormValues);
     }
   }, [location]);
   // console.log("category", category);
@@ -40,6 +43,8 @@ const Result = () => {
             setAge={setAge}
             setTerm={setTerm}
             setSum={setSum}
+            mop={mop}
+            setMop={setMop}
             setFeatureCheckBox={setFeatureCheckBox}
             featureCheckbox={featureCheckbox}
             companyCheckbox={companyCheckbox}
@@ -57,6 +62,8 @@ const Result = () => {
             featureCheckbox={featureCheckbox}
             companyCheckbox={companyCheckbox}
             setCompanyCheckbox={setCompanyCheckbox}
+            userFormValues={userFormValues}
+            mop={mop}
           />
         </div>
       </div>

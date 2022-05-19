@@ -11,11 +11,9 @@ const Table = ({
   sum,
   term,
   category,
-  setAge,
-  setFeatureCheckBox,
+  userFormValues,
+  mop,
   featureCheckbox,
-  companyCheckbox,
-  setCompanyCheckbox,
 }) => {
   const results = useSelector((state) => state.allResults.results);
   const filterresult = useSelector((state) => state.result);
@@ -26,7 +24,8 @@ const Table = ({
   const [resultcontent, setResultContent] = useState([]);
   const [viewplan, setViewPlan] = useState(false);
   const [modalData, setModalData] = useState();
-  const [premiumAmount, setPremiumAmount] = useState();
+  const [company, setCompany] = useState();
+  const [parentCompany, setParentCompany] = useState();
   useEffect(() => {
     if (results?.data) {
       setResultContent(Object.values(results.data.products));
@@ -57,7 +56,15 @@ const Table = ({
   const confirmation = () => {
     if (sum) {
       navigate("/confirm", {
-        state: { sum, term, category },
+        state: {
+          sum,
+          term,
+          category,
+          userFormValues,
+          mop,
+          company,
+          parentCompany,
+        },
       });
     } else {
       console.log("error");
@@ -233,6 +240,10 @@ const Table = ({
 
                       <br />
                       <button
+                        onMouseEnter={() => {
+                          setCompany(data.name);
+                          setParentCompany(data.company.name);
+                        }}
                         className="select-plan-button"
                         onClick={() => {
                           confirmation();

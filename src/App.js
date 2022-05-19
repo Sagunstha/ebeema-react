@@ -16,7 +16,7 @@ import "antd/dist/antd.less";
 import Result from "./components/pages/calculator/filter/Result";
 import ReadMore from "./components/pages/blog/ReadMore";
 import PasswordReset from "./components/pages/login/PasswordReset";
-import Confirm from "./components/pages/calculator/filter/Confirm";
+import Confirm from "./components/pages/calculator/filter/Confirmation/Confirm";
 
 function App() {
   return (

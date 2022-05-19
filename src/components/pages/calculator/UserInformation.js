@@ -33,7 +33,7 @@ const UserInformation = ({
     if (userFormValues.Name && userFormValues.phoneNo && province) {
       console.log("True", userFormValues, "province:", province);
       //arko page
-      navigate("/result", { state: { info, age, term, sum } });
+      navigate("/result", { state: { info, age, term, sum, userFormValues } });
     } else {
       console.log("error", userFormValues);
     }
