@@ -107,14 +107,14 @@ const Table = ({
         </p>
         {/* <div className="right-sort">
           <div className="sort-box"> */}
-        <Select
+        {/* <Select
           className="sorting-dropdown"
           placeholder="Sort by Relevance"
           style={{ border: "none" }}
         >
           <Option>hello</Option>
           <Option>hello</Option>
-        </Select>
+        </Select> */}
         {/* <p>
               <img className="filter-icon" src="./image/fliter.png" alt="" />
               &nbsp;&nbsp;

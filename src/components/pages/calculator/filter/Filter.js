@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchSelectedResult } from "../../redux/calculatorResult/resultAction";
 import { Form, Input, Checkbox, DatePicker, Select } from "antd";
 import moment from "moment";
 import "./Result.css";
+import { fetchSelectedResult } from "../../redux/calculatorResult/resultAction";
 // import uniqBy from "lodash";
 
 const Filter = ({
@@ -89,25 +89,26 @@ const Filter = ({
   useEffect(() => {
     onDateChange();
   }, []);
-
+  
   function onCompanyChange(checkedValues) {
     console.log("checked  ", checkedValues);
     let value = checkedValues || [];
+
     const data = {
-      category: category,
-      age: age,
+      category: "endowment",
+      age: "52",
       child_age: "0",
       proposer_age: "0",
       husband_age: "0",
       wife_age: "0",
-      term: term,
-      sum_assured: sum,
-      mop: mop,
+      term: "20",
+      sum_assured: "2000000.00",
+      mop: "yearly",
       invest: "100000.00",
       "company_id[]": value,
       features: [],
     };
-    setCompanyCheckbox(checkedValues);
+    // setCompanyCheckbox(checkedValues);
     dispatch(fetchSelectedResult(data));
   }
   function onFeatureChange(checkedfeatureValues) {

@@ -155,7 +155,7 @@ export const Investment = ({
                   DivideNumber(term, sum);
                 }}
               >
-                5 Lakhs
+                5Lakhs
               </Radio.Button>
               <Radio.Button
                 className="sum-radio-button"
@@ -165,7 +165,7 @@ export const Investment = ({
                   DivideNumber(term, sum);
                 }}
               >
-                10 Lakhs
+                10Lakhs
               </Radio.Button>
               <Radio.Button
                 className="sum-radio-button"
@@ -175,7 +175,7 @@ export const Investment = ({
                   DivideNumber(term, sum);
                 }}
               >
-                15 Lakhs
+                15Lakhs
               </Radio.Button>
               <Radio.Button
                 className="sum-radio-button"
@@ -185,7 +185,7 @@ export const Investment = ({
                   DivideNumber(term, sum);
                 }}
               >
-                20 Lakhs
+                20Lakhs
               </Radio.Button>
               <Radio.Button
                 className="sum-radio-button"
@@ -195,7 +195,7 @@ export const Investment = ({
                   DivideNumber(term, sum);
                 }}
               >
-                25 Lakhs
+                25Lakhs
               </Radio.Button>
               <Radio.Button
                 className="sum-radio-button"
@@ -205,7 +205,7 @@ export const Investment = ({
                   DivideNumber(term, sum);
                 }}
               >
-                50 Lakhs
+                50Lakhs
               </Radio.Button>
               <Title level={5}>OR</Title>
               <Input

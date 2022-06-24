@@ -2,14 +2,14 @@
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  /* margin-right: auto;
+  margin-left: auto; */
 }
 form#dynamic_rule {
   /* transition: transform 250ms; */
-  margin-left: 15%;
+  margin-left: 5%;
   margin-top: 3%;
-  margin-right: 10%;
+  margin-right: 5%;
 }
 
 .ant-select.dropdown-category.ant-select-single.ant-select-show-arrow {
